@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISTQB Test Techniques</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<!-- Navigation -->
+<header>
+    <nav class="navbar">
+        <div class="logo">ISTQB</div>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#blackbox">Black-box Testing</a></li>
+            <li><a href="#whitebox">White-box Testing</a></li>
+            <li><a href="#experience">Experience-based Testing</a></li>
+            <li><a href="#blackbox-in-depth">In-depth Black-box Testing</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Overview Section -->
+<section id="overview" class="section">
+    <div class="content" data-aos="fade-up">
+        <h1>Welcome to ISTQB Foundation: Test Techniques</h1>
+        <p>This course will teach you to understand and apply a variety of software test techniques.</p>
+        <p>Test techniques help the tester in test analysis (what to test) and in test design (how to test). These techniques are divided into three categories:</p>
+        <ul>
+            <li><strong>Black-box testing:</strong> Focuses on the behavior of the system without knowledge of internal structures.</li>
+            <li><strong>White-box testing:</strong> Relies on knowledge of the internal structure to design tests.</li>
+            <li><strong>Experience-based testing:</strong> Leverages the tester’s experience to detect defects.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Black-box Testing Section -->
+<section id="blackbox" class="section">
+    <div class="content" data-aos="fade-up">
+        <h2>Black-box Testing Overview</h2>
+        <p>Black-box testing focuses on system behavior, using test cases based on input and output. Let's explore some black-box test techniques.</p>
+
+        <!-- Equivalence Partitioning -->
+        <div class="card" data-aos="flip-right">
+            <h3>Equivalence Partitioning</h3>
+            <p>Example: Enter a valid phone number (6-10 digits) to validate equivalence partitions.</p>
+            <input type="text" placeholder="Enter phone number" id="phoneInput">
+            <button onclick="validatePhone()">Validate</button>
+            <p id="phoneResult"></p>
+        </div>
+
+        <!-- Boundary Value Analysis -->
+        <div class="card" data-aos="flip-left">
+            <h3>Boundary Value Analysis</h3>
+            <p>Example: Test boundary values for a pizza order (valid range: 1-10 pizzas).</p>
+            <input type="text" placeholder="Enter pizza quantity" id="pizzaInput">
+            <button onclick="validatePizza()">Validate</button>
+            <p id="pizzaResult"></p>
+        </div>
+    </div>
+</section>
+
+<!-- White-box Testing Section -->
+<section id="whitebox" class="section">
+    <div class="content" data-aos="fade-up">
+        <h2>White-box Testing Overview</h2>
+        <p>White-box testing analyzes the internal structure and processing of the system. You will often test all possible paths and logic in the code.</p>
+        <div class="card" data-aos="flip-left">
+            <h3>Code Snippet: Path Coverage</h3>
+            <p>Look at this function and identify test cases to ensure 100% path coverage:</p>
+            <pre>
+          function sum(arr) {
+            let total = 0;
+            for (let i = 0; i < arr.length; i++) {
+              total += arr[i];
+            }
+            return total;
+          }
+        </pre>
+        </div>
+    </div>
+</section>
+
+<!-- Experience-based Testing Section -->
+<section id="experience" class="section">
+    <div class="content" data-aos="fade-up">
+        <h2>Experience-based Testing</h2>
+        <p>Experience-based testing leverages the knowledge and intuition of the tester. In this approach, testers use their insights to identify defects that may not be captured using formal techniques.</p>
+        <div class="card" data-aos="flip-right">
+            <p>Explore this e-commerce interface and find any usability or functionality defects.</p>
+        </div>
+    </div>
+</section>
+
+<!-- In-depth Black-box Testing Techniques Section -->
+<section id="blackbox-in-depth" class="section">
+    <div class="content" data-aos="fade-up">
+        <h2>In-depth Black-box Testing Techniques</h2>
+        <p>This section dives deeper into black-box testing techniques with detailed examples:</p>
+
+        <!-- Equivalence Partitioning - Detailed -->
+        <div class="card" data-aos="flip-right">
+            <h3>Equivalence Partitioning (Detailed)</h3>
+            <p>Example: Enter a username between 5-15 characters.</p>
+            <input type="text" placeholder="Enter username" id="usernameInput">
+            <button onclick="validateUsername()">Validate</button>
+            <p id="usernameResult"></p>
+        </div>
+
+        <!-- Boundary Value Analysis - Detailed -->
+        <div class="card" data-aos="flip-left">
+            <h3>Boundary Value Analysis (Detailed)</h3>
+            <p>Example: Test the boundary values of a banking system withdrawal limit ($10 to $5000).</p>
+            <input type="text" placeholder="Enter withdrawal amount" id="withdrawalInput">
+            <button onclick="validateWithdrawal()">Validate</button>
+            <p id="withdrawalResult"></p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© Ouajdi Belhaj 2024</p>
+    <a href="https://github.com/YOUR_GITHUB_REPO">View on GitHub</a>
+</footer>
+
+<!-- Scripts -->
+<script src="scripts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+</body>
+</html>
