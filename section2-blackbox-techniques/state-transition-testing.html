@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>State Transition Testing | Black-box Testing Techniques</title>
     <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
+
+<!-- Navigation Bar -->
 <header>
-    <nav>
+    <nav class="navbar">
+        <div class="logo">ISTQB</div>
         <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="../section1-overview/welcome.html">Overview Section</a></li>
@@ -20,7 +24,8 @@
     </nav>
 </header>
 
-<section class="intro-section">
+<!-- Main Section -->
+<section class="intro-section section" data-aos="fade-up">
     <h1>State Transition Testing</h1>
     <p>State transition testing is a technique used to test how a system transitions from one state to another based on different inputs or events. It is particularly useful for systems that can be in multiple states, and where the behavior of the system depends on the current state.</p>
 
@@ -35,7 +40,7 @@
     <p>Use the form below to simulate state transitions in the vending machine. Insert a coin, select a product, and see how the machine behaves.</p>
 
     <!-- Form for State Transition Testing -->
-    <div class="interactive-example">
+    <div class="interactive-example card" data-aos="flip-right">
         <form id="vendingMachineForm">
             <label for="machineAction">Action:</label>
             <select id="machineAction">
@@ -59,11 +64,79 @@
 
 </section>
 
+<!-- Footer -->
 <footer>
     <p>© Ouajdi Belhaj 2024 | <a href="https://github.com/istqbtesttrial/istqb-test-techniqueschapt4-part1_blackBox">View on GitHub</a></p>
 </footer>
 
 <!-- External JS -->
 <script src="../assets/scripts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init();
+
+    // JavaScript for Vending Machine State Transitions
+    const vendingMachineStates = {
+        idle: 'Idle',
+        hasCoin: 'Has Coin',
+        dispensing: 'Dispensing',
+        outOfStock: 'Out of Stock'
+    };
+
+    let currentState = vendingMachineStates.idle;
+
+    document.getElementById('vendingMachineForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const selectedAction = document.getElementById('machineAction').value;
+        const feedback = document.getElementById('vendingMachineFeedback');
+
+        switch (selectedAction) {
+            case 'insertCoin':
+                if (currentState === vendingMachineStates.idle) {
+                    currentState = vendingMachineStates.hasCoin;
+                    feedback.textContent = 'Coin inserted. You can now select a product.';
+                    feedback.style.color = 'green';
+                } else {
+                    feedback.textContent = 'Action not allowed. Coin already inserted.';
+                    feedback.style.color = 'red';
+                }
+                break;
+            case 'selectProduct':
+                if (currentState === vendingMachineStates.hasCoin) {
+                    currentState = vendingMachineStates.dispensing;
+                    feedback.textContent = 'Product selected. Dispensing product...';
+                    feedback.style.color = 'green';
+                } else {
+                    feedback.textContent = 'You need to insert a coin first.';
+                    feedback.style.color = 'red';
+                }
+                break;
+            case 'dispenseProduct':
+                if (currentState === vendingMachineStates.dispensing) {
+                    currentState = vendingMachineStates.idle;
+                    feedback.textContent = 'Product dispensed. Thank you!';
+                    feedback.style.color = 'green';
+                } else {
+                    feedback.textContent = 'You need to select a product first.';
+                    feedback.style.color = 'red';
+                }
+                break;
+            case 'outOfStock':
+                if (currentState === vendingMachineStates.hasCoin) {
+                    currentState = vendingMachineStates.outOfStock;
+                    feedback.textContent = 'Product out of stock. Please select another product or request a refund.';
+                    feedback.style.color = 'red';
+                } else {
+                    feedback.textContent = 'Action not allowed at this state.';
+                    feedback.style.color = 'red';
+                }
+                break;
+            default:
+                feedback.textContent = 'Please select an action.';
+                feedback.style.color = 'red';
+        }
+    });
+</script>
 </body>
 </html>

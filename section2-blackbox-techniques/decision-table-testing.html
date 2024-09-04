@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decision Table Testing | Black-box Testing Techniques</title>
     <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
+
+<!-- Navigation Bar -->
 <header>
-    <nav>
+    <nav class="navbar">
+        <div class="logo">ISTQB</div>
         <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="../section1-overview/welcome.html">Overview Section</a></li>
@@ -20,7 +24,8 @@
     </nav>
 </header>
 
-<section class="intro-section">
+<!-- Main Section -->
+<section class="intro-section section" data-aos="fade-up">
     <h1>Decision Table Testing</h1>
     <p>Decision Table Testing is a black-box test technique that helps you test different combinations of inputs and their corresponding outputs. It is especially useful when the system has complex logic with multiple conditions leading to different outcomes.</p>
 
@@ -28,7 +33,7 @@
     <p>Consider an online store that provides discounts based on the user's membership and the total cart value. Use the form below to select a membership type and cart value, then see how the system applies discounts based on the decision table logic.</p>
 
     <!-- Form for Decision Table Example -->
-    <div class="interactive-example">
+    <div class="interactive-example card" data-aos="flip-right">
         <form id="discountForm">
             <label for="membership">Membership Type:</label>
             <select id="membership">
@@ -98,11 +103,45 @@
 
 </section>
 
+<!-- Footer -->
 <footer>
     <p>© Ouajdi Belhaj 2024 | <a href="https://github.com/istqbtesttrial/istqb-test-techniqueschapt4-part1_blackBox">View on GitHub</a></p>
 </footer>
 
 <!-- External JS -->
 <script src="../assets/scripts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init();
+
+    // JavaScript logic for Decision Table
+    document.getElementById('discountForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        const membership = document.getElementById('membership').value;
+        const cartValue = document.getElementById('cartValue').value;
+        const discountFeedback = document.getElementById('discountFeedback');
+        let discount = '';
+
+        // Logic based on the decision table
+        if (membership === 'none' && cartValue >= 100) {
+            discount = '5% discount';
+        } else if (membership === 'none') {
+            discount = 'No discount';
+        } else if (membership === 'silver' && cartValue >= 100) {
+            discount = '10% discount';
+        } else if (membership === 'silver') {
+            discount = '5% discount';
+        } else if (membership === 'gold' && cartValue >= 100) {
+            discount = '20% discount';
+        } else if (membership === 'gold') {
+            discount = '10% discount';
+        } else {
+            discount = 'Please select a membership type and enter a valid cart value.';
+        }
+
+        discountFeedback.textContent = discount;
+    });
+</script>
 </body>
 </html>

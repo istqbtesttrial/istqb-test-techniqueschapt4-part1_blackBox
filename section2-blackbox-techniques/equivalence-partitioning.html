@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Equivalence Partitioning | Black-box Testing Techniques</title>
     <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
+
+<!-- Navigation Bar -->
 <header>
-    <nav>
+    <nav class="navbar">
+        <div class="logo">ISTQB</div>
         <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="../section1-overview/welcome.html">Overview Section</a></li>
@@ -20,7 +24,8 @@
     </nav>
 </header>
 
-<section class="intro-section">
+<!-- Main Section -->
+<section class="intro-section section" data-aos="fade-up">
     <h1>Equivalence Partitioning</h1>
     <p>Equivalence partitioning is a black-box test design technique in which input data is divided into partitions. Each partition is expected to behave the same way, and test cases can be designed to test one representative value from each partition.</p>
 
@@ -28,7 +33,7 @@
     <p>Imagine you are testing a form field that accepts phone numbers. The valid phone numbers must be between 100000 and 999999. Use the form below to input different phone numbers and observe how equivalence partitioning can be applied.</p>
 
     <!-- Form for Phone Number Validation -->
-    <div class="interactive-example">
+    <div class="interactive-example card" data-aos="flip-right">
         <form id="phoneForm">
             <label for="phoneInput">Phone Number:</label>
             <input type="text" id="phoneInput" placeholder="Enter phone number">
@@ -45,11 +50,33 @@
 
 </section>
 
+<!-- Footer -->
 <footer>
     <p>© Ouajdi Belhaj 2024 | <a href="https://github.com/istqbtesttrial/istqb-test-techniqueschapt4-part1_blackBox">View on GitHub</a></p>
 </footer>
 
 <!-- External JS -->
 <script src="../assets/scripts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init();
+
+    // JavaScript Validation for Phone Number
+    document.getElementById('phoneForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        const phoneInput = document.getElementById('phoneInput').value;
+        const phoneFeedback = document.getElementById('phoneFeedback');
+
+        // Check if phone number is in the valid range
+        if (phoneInput >= 100000 && phoneInput <= 999999) {
+            phoneFeedback.textContent = 'Valid phone number.';
+            phoneFeedback.style.color = 'green';
+        } else {
+            phoneFeedback.textContent = 'Invalid phone number. Please enter a number between 100000 and 999999.';
+            phoneFeedback.style.color = 'red';
+        }
+    });
+</script>
 </body>
 </html>
