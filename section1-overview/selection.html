@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Technique Selection | ISTQB Test Techniques</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="welcome.html">Welcome</a></li>
+            <li><a href="overview.html">Overview</a></li>
+            <li><a href="blackbox.html">Black-box Testing</a></li>
+            <li><a href="whitebox.html">White-box Testing</a></li>
+            <li><a href="experience.html">Experience-based Testing</a></li>
+            <li><a href="selection.html">Test Technique Selection</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="intro-section">
+    <h1>Selecting the Right Test Technique</h1>
+    <p>Choosing the right test technique depends on the specific context of the system under test. Testers must consider factors like the type of system, the level of risk, the availability of documentation, and the expertise of the tester.</p>
+
+    <h2>When to Use Different Test Techniques</h2>
+    <ul>
+        <li><strong>Black-box Techniques:</strong> Use when testing system behavior without knowing the internal structure (e.g., functional testing).</li>
+        <li><strong>White-box Techniques:</strong> Use when testing internal structures like code logic (e.g., unit testing or code coverage).</li>
+        <li><strong>Experience-based Techniques:</strong> Use when documentation is limited or when leveraging the tester’s expertise to explore potential defects.</li>
+    </ul>
+
+    <h2>Practical Scenario: Online Payment System</h2>
+    <p>Imagine you are testing an online payment system that processes credit card transactions. Based on the scenario described below, select which test technique would be the most appropriate:</p>
+
+    <div class="interactive-example">
+        <h3>Scenario</h3>
+        <p>The online payment system must validate credit card details (e.g., card number, expiry date, CVV), process the transaction, and return a success or error message.</p>
+
+        <form id="selectionForm">
+            <label for="testTechnique">Which test technique would you apply?</label>
+            <select id="testTechnique">
+                <option value="">-- Select Technique --</option>
+                <option value="blackbox">Black-box Testing</option>
+                <option value="whitebox">White-box Testing</option>
+                <option value="experience">Experience-based Testing</option>
+            </select>
+            <button type="submit">Submit</button>
+            <p id="selectionFeedback"></p>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>© Ouajdi Belhaj 2024 | <a href="https://github.com/istqbtesttrial/istqb-test-techniqueschapt4-part1_blackBox">View on GitHub</a></p>
+</footer>
+
+<!-- External JS -->
+<script src="../assets/scripts.js"></script>
+</body>
+</html>

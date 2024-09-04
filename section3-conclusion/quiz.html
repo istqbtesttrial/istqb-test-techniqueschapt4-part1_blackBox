@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Quiz | ISTQB Test Techniques</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="conclusion.html">Conclusion</a></li>
+            <li><a href="quiz.html">Final Quiz</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="intro-section">
+    <h1>Final Quiz: Test Your Knowledge</h1>
+    <p>Take this quiz to test your understanding of the test techniques covered in this course. Answer all questions to get your final score.</p>
+
+    <!-- Quiz Form -->
+    <form id="finalQuizForm">
+        <div class="quiz-question">
+            <label for="question1">1. What is the primary focus of black-box testing?</label>
+            <select id="question1">
+                <option value="">-- Select Answer --</option>
+                <option value="internalStructure">Testing the internal structure of the system.</option>
+                <option value="systemBehavior">Testing the system behavior without knowing the internal structure.</option>
+                <option value="experienceBased">Using the experience of the tester to find defects.</option>
+            </select>
+        </div>
+
+        <div class="quiz-question">
+            <label for="question2">2. When should white-box testing be applied?</label>
+            <select id="question2">
+                <option value="">-- Select Answer --</option>
+                <option value="externalInterfaces">When testing external interfaces.</option>
+                <option value="codeLogic">When testing the internal code logic and structure.</option>
+                <option value="userExperience">When exploring the user experience of a system.</option>
+            </select>
+        </div>
+
+        <div class="quiz-question">
+            <label for="question3">3. Experience-based testing is best used when...</label>
+            <select id="question3">
+                <option value="">-- Select Answer --</option>
+                <option value="codePathCoverage">You want to cover all code paths.</option>
+                <option value="limitedDocumentation">There is limited documentation or when relying on the tester’s intuition.</option>
+                <option value="interfaceTesting">You need to test the external interfaces of a system.</option>
+            </select>
+        </div>
+
+        <button type="submit">Submit Answers</button>
+        <p id="quizFeedback"></p>
+    </form>
+</section>
+
+<footer>
+    <p>© Ouajdi Belhaj 2024 | <a href="https://github.com/istqbtesttrial/istqb-test-techniqueschapt4-part1_blackBox">View on GitHub</a></p>
+</footer>
+
+<!-- External JS -->
+<script src="../assets/scripts.js"></script>
+</body>
+</html>

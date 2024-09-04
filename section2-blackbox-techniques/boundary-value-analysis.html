@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boundary Value Analysis | Black-box Testing Techniques</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../section1-overview/welcome.html">Overview Section</a></li>
+            <li><a href="equivalence-partitioning.html">Equivalence Partitioning</a></li>
+            <li><a href="boundary-value-analysis.html">Boundary Value Analysis</a></li>
+            <li><a href="decision-table-testing.html">Decision Table Testing</a></li>
+            <li><a href="state-transition-testing.html">State Transition Testing</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="intro-section">
+    <h1>Boundary Value Analysis</h1>
+    <p>Boundary Value Analysis (BVA) is a black-box testing technique that focuses on testing the boundaries of equivalence partitions. Boundary values are more likely to expose defects compared to values within the partitions.</p>
+
+    <h2>Real-life Example: Age Validation</h2>
+    <p>In the form below, you can enter an age. The valid range for age is between 18 and 65. Use Boundary Value Analysis to test values at the boundaries (e.g., 17, 18, 65, 66) to see if the system accepts or rejects them appropriately.</p>
+
+    <!-- Form for Age Validation -->
+    <div class="interactive-example">
+        <form id="ageForm">
+            <label for="ageInput">Age:</label>
+            <input type="text" id="ageInput" placeholder="Enter age">
+            <button type="submit">Validate</button>
+            <p id="ageFeedback"></p>
+        </form>
+    </div>
+
+    <h3>Explanation of Boundary Values:</h3>
+    <ul>
+        <li><strong>Valid Boundaries:</strong> Ages 18 and 65 are valid boundary values.</li>
+        <li><strong>Invalid Boundaries:</strong> Ages below 18 and above 65 (e.g., 17 and 66) are invalid boundary values.</li>
+    </ul>
+
+</section>
+
+<footer>
+    <p>© Ouajdi Belhaj 2024 | <a href="https://github.com/istqbtesttrial/istqb-test-techniqueschapt4-part1_blackBox">View on GitHub</a></p>
+</footer>
+
+<!-- External JS -->
+<script src="../assets/scripts.js"></script>
+</body>
+</html>

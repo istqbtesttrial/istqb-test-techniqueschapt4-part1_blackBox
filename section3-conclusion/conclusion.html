@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conclusion | ISTQB Test Techniques</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../section1-overview/welcome.html">Overview Section</a></li>
+            <li><a href="../section2-blackbox-techniques/equivalence-partitioning.html">Black-box Techniques</a></li>
+            <li><a href="conclusion.html">Conclusion</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="intro-section">
+    <h1>Conclusion: Applying Test Techniques</h1>
+    <p>In this course, we explored several test techniques, including black-box, white-box, and experience-based testing techniques. Each of these methods plays a vital role in ensuring software quality by identifying different types of defects.</p>
+
+    <h2>Key Takeaways</h2>
+    <ul>
+        <li><strong>Black-box Testing:</strong> Focuses on system behavior and does not require knowledge of the internal structure of the system.</li>
+        <li><strong>White-box Testing:</strong> Requires an understanding of the internal structure or code and helps test specific paths and conditions.</li>
+        <li><strong>Experience-based Testing:</strong> Relies on the experience and intuition of the tester to explore possible defects, especially when documentation is limited.</li>
+        <li><strong>Test Technique Selection:</strong> The appropriate test technique depends on the specific system under test, the level of risk, and the available resources.</li>
+    </ul>
+
+    <h2>Final Practice Exercise</h2>
+    <p>In the scenario below, you will apply the test techniques you’ve learned. Read the scenario carefully and decide which technique to use and why.</p>
+
+    <div class="interactive-example">
+        <h3>Scenario: Online Ticket Booking System</h3>
+        <p>The system allows users to book tickets for events. The user must select a number of tickets (between 1 and 10), choose the type of ticket (VIP or Standard), and confirm payment details. The system should validate the user inputs and handle errors (e.g., invalid ticket quantity, payment issues).</p>
+
+        <form id="conclusionForm">
+            <label for="selectedTechnique">Which test technique would you apply for this system?</label>
+            <select id="selectedTechnique">
+                <option value="">-- Select Test Technique --</option>
+                <option value="blackbox">Black-box Testing</option>
+                <option value="whitebox">White-box Testing</option>
+                <option value="experience">Experience-based Testing</option>
+            </select>
+            <button type="submit">Submit</button>
+            <p id="conclusionFeedback"></p>
+        </form>
+    </div>
+</section>
+
+<footer>
+    <p>© Ouajdi Belhaj 2024 | <a href="https://github.com/istqbtesttrial/istqb-test-techniqueschapt4-part1_blackBox">View on GitHub</a></p>
+</footer>
+
+<!-- External JS -->
+<script src="../assets/scripts.js"></script>
+</body>
+</html>

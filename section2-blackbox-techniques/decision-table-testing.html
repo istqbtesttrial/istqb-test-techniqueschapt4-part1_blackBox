@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decision Table Testing | Black-box Testing Techniques</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../section1-overview/welcome.html">Overview Section</a></li>
+            <li><a href="equivalence-partitioning.html">Equivalence Partitioning</a></li>
+            <li><a href="boundary-value-analysis.html">Boundary Value Analysis</a></li>
+            <li><a href="decision-table-testing.html">Decision Table Testing</a></li>
+            <li><a href="state-transition-testing.html">State Transition Testing</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="intro-section">
+    <h1>Decision Table Testing</h1>
+    <p>Decision Table Testing is a black-box test technique that helps you test different combinations of inputs and their corresponding outputs. It is especially useful when the system has complex logic with multiple conditions leading to different outcomes.</p>
+
+    <h2>Real-life Example: Online Discount System</h2>
+    <p>Consider an online store that provides discounts based on the user's membership and the total cart value. Use the form below to select a membership type and cart value, then see how the system applies discounts based on the decision table logic.</p>
+
+    <!-- Form for Decision Table Example -->
+    <div class="interactive-example">
+        <form id="discountForm">
+            <label for="membership">Membership Type:</label>
+            <select id="membership">
+                <option value="">-- Select Membership --</option>
+                <option value="none">None</option>
+                <option value="silver">Silver</option>
+                <option value="gold">Gold</option>
+            </select>
+
+            <label for="cartValue">Cart Value:</label>
+            <input type="number" id="cartValue" placeholder="Enter cart value" min="0">
+
+            <button type="submit">Check Discount</button>
+            <p id="discountFeedback"></p>
+        </form>
+    </div>
+
+    <h3>Decision Table Explanation:</h3>
+    <table class="decision-table">
+        <thead>
+        <tr>
+            <th>Condition</th>
+            <th>Membership Type</th>
+            <th>Cart Value &ge; 100</th>
+            <th>Discount Applied</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Rule 1</td>
+            <td>None</td>
+            <td>False</td>
+            <td>No discount</td>
+        </tr>
+        <tr>
+            <td>Rule 2</td>
+            <td>None</td>
+            <td>True</td>
+            <td>5% discount</td>
+        </tr>
+        <tr>
+            <td>Rule 3</td>
+            <td>Silver</td>
+            <td>False</td>
+            <td>5% discount</td>
+        </tr>
+        <tr>
+            <td>Rule 4</td>
+            <td>Silver</td>
+            <td>True</td>
+            <td>10% discount</td>
+        </tr>
+        <tr>
+            <td>Rule 5</td>
+            <td>Gold</td>
+            <td>False</td>
+            <td>10% discount</td>
+        </tr>
+        <tr>
+            <td>Rule 6</td>
+            <td>Gold</td>
+            <td>True</td>
+            <td>20% discount</td>
+        </tr>
+        </tbody>
+    </table>
+
+</section>
+
+<footer>
+    <p>© Ouajdi Belhaj 2024 | <a href="https://github.com/istqbtesttrial/istqb-test-techniqueschapt4-part1_blackBox">View on GitHub</a></p>
+</footer>
+
+<!-- External JS -->
+<script src="../assets/scripts.js"></script>
+</body>
+</html>

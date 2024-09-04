@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Transition Testing | Black-box Testing Techniques</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../section1-overview/welcome.html">Overview Section</a></li>
+            <li><a href="equivalence-partitioning.html">Equivalence Partitioning</a></li>
+            <li><a href="boundary-value-analysis.html">Boundary Value Analysis</a></li>
+            <li><a href="decision-table-testing.html">Decision Table Testing</a></li>
+            <li><a href="state-transition-testing.html">State Transition Testing</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="intro-section">
+    <h1>State Transition Testing</h1>
+    <p>State transition testing is a technique used to test how a system transitions from one state to another based on different inputs or events. It is particularly useful for systems that can be in multiple states, and where the behavior of the system depends on the current state.</p>
+
+    <h2>Real-life Example: Vending Machine</h2>
+    <p>Imagine a vending machine with the following states:</p>
+    <ul>
+        <li><strong>Idle:</strong> Waiting for a coin to be inserted.</li>
+        <li><strong>Has Coin:</strong> A coin has been inserted and the user can select a product.</li>
+        <li><strong>Dispensing:</strong> The machine is dispensing the selected product.</li>
+        <li><strong>Out of Stock:</strong> The selected product is out of stock.</li>
+    </ul>
+    <p>Use the form below to simulate state transitions in the vending machine. Insert a coin, select a product, and see how the machine behaves.</p>
+
+    <!-- Form for State Transition Testing -->
+    <div class="interactive-example">
+        <form id="vendingMachineForm">
+            <label for="machineAction">Action:</label>
+            <select id="machineAction">
+                <option value="">-- Select Action --</option>
+                <option value="insertCoin">Insert Coin</option>
+                <option value="selectProduct">Select Product</option>
+                <option value="dispenseProduct">Dispense Product</option>
+                <option value="outOfStock">Product Out of Stock</option>
+            </select>
+            <button type="submit">Submit</button>
+            <p id="vendingMachineFeedback"></p>
+        </form>
+    </div>
+
+    <h3>Explanation of States and Transitions:</h3>
+    <ul>
+        <li><strong>Idle to Has Coin:</strong> When a coin is inserted, the machine moves from Idle to Has Coin state.</li>
+        <li><strong>Has Coin to Dispensing:</strong> When a product is selected, the machine moves from Has Coin to Dispensing.</li>
+        <li><strong>Has Coin to Out of Stock:</strong> If the selected product is out of stock, the machine moves to the Out of Stock state.</li>
+    </ul>
+
+</section>
+
+<footer>
+    <p>© Ouajdi Belhaj 2024 | <a href="https://github.com/istqbtesttrial/istqb-test-techniqueschapt4-part1_blackBox">View on GitHub</a></p>
+</footer>
+
+<!-- External JS -->
+<script src="../assets/scripts.js"></script>
+</body>
+</html>

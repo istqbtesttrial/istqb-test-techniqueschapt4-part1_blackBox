@@ -4,131 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ISTQB Test Techniques</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
-<!-- Navigation -->
+
+<!-- Navigation Bar -->
 <header>
     <nav class="navbar">
         <div class="logo">ISTQB</div>
         <ul>
-            <li><a href="#overview">Overview</a></li>
-            <li><a href="#blackbox">Black-box Testing</a></li>
-            <li><a href="#whitebox">White-box Testing</a></li>
-            <li><a href="#experience">Experience-based Testing</a></li>
-            <li><a href="#blackbox-in-depth">In-depth Black-box Testing</a></li>
+            <li><a href="section1-overview/welcome.html">Overview</a></li>
+            <li><a href="section2-blackbox-techniques/equivalence-partitioning.html">Black-box Testing</a></li>
+            <li><a href="section3-conclusion/conclusion.html">Conclusion</a></li>
         </ul>
     </nav>
 </header>
 
-<!-- Overview Section -->
-<section id="overview" class="section">
-    <div class="content" data-aos="fade-up">
-        <h1>Welcome to ISTQB Foundation: Test Techniques</h1>
-        <p>This course will teach you to understand and apply a variety of software test techniques.</p>
-        <p>Test techniques help the tester in test analysis (what to test) and in test design (how to test). These techniques are divided into three categories:</p>
-        <ul>
-            <li><strong>Black-box testing:</strong> Focuses on the behavior of the system without knowledge of internal structures.</li>
-            <li><strong>White-box testing:</strong> Relies on knowledge of the internal structure to design tests.</li>
-            <li><strong>Experience-based testing:</strong> Leverages the tester’s experience to detect defects.</li>
-        </ul>
-    </div>
-</section>
+<!-- Main Section -->
+<section class="landing-section section" data-aos="fade-up">
+    <h2>Welcome to the ISTQB Foundation: Test Techniques Course</h2>
+    <p>This course will teach you how to apply software test techniques through practical examples and in-depth analysis.</p>
 
-<!-- Black-box Testing Section -->
-<section id="blackbox" class="section">
-    <div class="content" data-aos="fade-up">
-        <h2>Black-box Testing Overview</h2>
-        <p>Black-box testing focuses on system behavior, using test cases based on input and output. Let's explore some black-box test techniques.</p>
-
-        <!-- Equivalence Partitioning -->
+    <div class="sections-grid">
+        <!-- Section 1: Overview of Test Techniques -->
         <div class="card" data-aos="flip-right">
-            <h3>Equivalence Partitioning</h3>
-            <p>Example: Enter a valid phone number (6-10 digits) to validate equivalence partitions.</p>
-            <input type="text" placeholder="Enter phone number" id="phoneInput">
-            <button onclick="validatePhone()">Validate</button>
-            <p id="phoneResult"></p>
+            <h3>Part 1: Overview of Test Techniques</h3>
+            <p>Get a brief introduction to test techniques, including black-box, white-box, and experience-based techniques with small practical examples.</p>
+            <a href="section1-overview/welcome.html" class="cta-button">Go to Section 1</a>
         </div>
 
-        <!-- Boundary Value Analysis -->
+        <!-- Section 2: In-depth Black-box Testing -->
         <div class="card" data-aos="flip-left">
-            <h3>Boundary Value Analysis</h3>
-            <p>Example: Test boundary values for a pizza order (valid range: 1-10 pizzas).</p>
-            <input type="text" placeholder="Enter pizza quantity" id="pizzaInput">
-            <button onclick="validatePizza()">Validate</button>
-            <p id="pizzaResult"></p>
+            <h3>Part 2: In-depth Black-box Techniques</h3>
+            <p>Explore black-box testing techniques in detail with real-life examples, including equivalence partitioning, boundary value analysis, and more.</p>
+            <a href="section2-blackbox-techniques/equivalence-partitioning.html" class="cta-button">Go to Section 2</a>
         </div>
-    </div>
-</section>
 
-<!-- White-box Testing Section -->
-<section id="whitebox" class="section">
-    <div class="content" data-aos="fade-up">
-        <h2>White-box Testing Overview</h2>
-        <p>White-box testing analyzes the internal structure and processing of the system. You will often test all possible paths and logic in the code.</p>
-        <div class="card" data-aos="flip-left">
-            <h3>Code Snippet: Path Coverage</h3>
-            <p>Look at this function and identify test cases to ensure 100% path coverage:</p>
-            <pre>
-          function sum(arr) {
-            let total = 0;
-            for (let i = 0; i < arr.length; i++) {
-              total += arr[i];
-            }
-            return total;
-          }
-        </pre>
-        </div>
-    </div>
-</section>
-
-<!-- Experience-based Testing Section -->
-<section id="experience" class="section">
-    <div class="content" data-aos="fade-up">
-        <h2>Experience-based Testing</h2>
-        <p>Experience-based testing leverages the knowledge and intuition of the tester. In this approach, testers use their insights to identify defects that may not be captured using formal techniques.</p>
+        <!-- Section 3: Conclusion and Final Exercises -->
         <div class="card" data-aos="flip-right">
-            <p>Explore this e-commerce interface and find any usability or functionality defects.</p>
-        </div>
-    </div>
-</section>
-
-<!-- In-depth Black-box Testing Techniques Section -->
-<section id="blackbox-in-depth" class="section">
-    <div class="content" data-aos="fade-up">
-        <h2>In-depth Black-box Testing Techniques</h2>
-        <p>This section dives deeper into black-box testing techniques with detailed examples:</p>
-
-        <!-- Equivalence Partitioning - Detailed -->
-        <div class="card" data-aos="flip-right">
-            <h3>Equivalence Partitioning (Detailed)</h3>
-            <p>Example: Enter a username between 5-15 characters.</p>
-            <input type="text" placeholder="Enter username" id="usernameInput">
-            <button onclick="validateUsername()">Validate</button>
-            <p id="usernameResult"></p>
-        </div>
-
-        <!-- Boundary Value Analysis - Detailed -->
-        <div class="card" data-aos="flip-left">
-            <h3>Boundary Value Analysis (Detailed)</h3>
-            <p>Example: Test the boundary values of a banking system withdrawal limit ($10 to $5000).</p>
-            <input type="text" placeholder="Enter withdrawal amount" id="withdrawalInput">
-            <button onclick="validateWithdrawal()">Validate</button>
-            <p id="withdrawalResult"></p>
+            <h3>Part 3: Conclusion and Final Exercises</h3>
+            <p>Review the key takeaways and put your knowledge to the test with a final quiz and practical exercises.</p>
+            <a href="section3-conclusion/conclusion.html" class="cta-button">Go to Section 3</a>
         </div>
     </div>
 </section>
 
 <!-- Footer -->
 <footer>
-    <p>© Ouajdi Belhaj 2024</p>
-    <a href="https://github.com/YOUR_GITHUB_REPO">View on GitHub</a>
+    <p>© Ouajdi Belhaj 2024 | <a href="https://github.com/istqbtesttrial/istqb-test-techniqueschapt4-part1_blackBox">View on GitHub</a></p>
 </footer>
 
-<!-- Scripts -->
-<script src="scripts.js"></script>
+<!-- External JS -->
+<script src="assets/scripts.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
     AOS.init();

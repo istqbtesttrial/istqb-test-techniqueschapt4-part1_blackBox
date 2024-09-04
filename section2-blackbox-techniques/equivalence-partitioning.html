@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equivalence Partitioning | Black-box Testing Techniques</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../section1-overview/welcome.html">Overview Section</a></li>
+            <li><a href="equivalence-partitioning.html">Equivalence Partitioning</a></li>
+            <li><a href="boundary-value-analysis.html">Boundary Value Analysis</a></li>
+            <li><a href="decision-table-testing.html">Decision Table Testing</a></li>
+            <li><a href="state-transition-testing.html">State Transition Testing</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="intro-section">
+    <h1>Equivalence Partitioning</h1>
+    <p>Equivalence partitioning is a black-box test design technique in which input data is divided into partitions. Each partition is expected to behave the same way, and test cases can be designed to test one representative value from each partition.</p>
+
+    <h2>Real-life Example: Phone Number Validation</h2>
+    <p>Imagine you are testing a form field that accepts phone numbers. The valid phone numbers must be between 100000 and 999999. Use the form below to input different phone numbers and observe how equivalence partitioning can be applied.</p>
+
+    <!-- Form for Phone Number Validation -->
+    <div class="interactive-example">
+        <form id="phoneForm">
+            <label for="phoneInput">Phone Number:</label>
+            <input type="text" id="phoneInput" placeholder="Enter phone number">
+            <button type="submit">Validate</button>
+            <p id="phoneFeedback"></p>
+        </form>
+    </div>
+
+    <h3>Explanation of Equivalence Partitions:</h3>
+    <ul>
+        <li><strong>Valid Partition:</strong> Phone numbers between 100000 and 999999 are valid.</li>
+        <li><strong>Invalid Partition:</strong> Phone numbers below 100000 and above 999999 are invalid.</li>
+    </ul>
+
+</section>
+
+<footer>
+    <p>© Ouajdi Belhaj 2024 | <a href="https://github.com/istqbtesttrial/istqb-test-techniqueschapt4-part1_blackBox">View on GitHub</a></p>
+</footer>
+
+<!-- External JS -->
+<script src="../assets/scripts.js"></script>
+</body>
+</html>

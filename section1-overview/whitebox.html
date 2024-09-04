@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White-box Testing | ISTQB Test Techniques</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="welcome.html">Welcome</a></li>
+            <li><a href="overview.html">Overview</a></li>
+            <li><a href="blackbox.html">Black-box Testing</a></li>
+            <li><a href="whitebox.html">White-box Testing</a></li>
+            <li><a href="experience.html">Experience-based Testing</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="intro-section">
+    <h1>White-box Testing</h1>
+    <p>White-box testing is a testing technique that analyzes the internal structure and logic of the system being tested. Testers must have knowledge of the code and logic to create test cases that ensure full coverage.</p>
+
+    <h2>Practical Example: Path Coverage</h2>
+    <p>In the example below, review the code and determine what test cases you would create to ensure 100% path coverage.</p>
+
+    <!-- Code Snippet Example -->
+    <div class="code-example">
+            <pre>
+function calculateDiscount(price, discount) {
+    if (price > 100) {
+        return price - (price * discount);
+    } else {
+        return price;
+    }
+}
+            </pre>
+    </div>
+
+    <div class="interactive-example">
+        <h3>Your Task</h3>
+        <p>Based on the code above, which test cases would you create to ensure that all paths (both the `if` and `else` statements) are covered?</p>
+        <p><em>Think about different values for `price` and `discount` that would trigger the `if` and `else` branches.</em></p>
+    </div>
+</section>
+
+<footer>
+    <p>© Ouajdi Belhaj 2024 | <a href="https://github.com/istqbtesttrial/istqb-test-techniqueschapt4-part1_blackBox">View on GitHub</a></p>
+</footer>
+
+<!-- External JS -->
+<script src="../assets/scripts.js"></script>
+</body>
+</html>
